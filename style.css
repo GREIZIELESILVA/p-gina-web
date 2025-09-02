@@ -93,4 +93,73 @@ footer {
 
 
 
+/* Resetando alguns estilos padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%; /* Garantir que o body e html ocupem toda a altura da tela */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.content {
+    min-height: 2000px; /* Define um conteúdo longo para rolagem */
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Estilo para os botões */
+#scrollUp, #scrollDown {
+    position: fixed;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    margin: 10px;
+}
+
+#scrollUp {
+    bottom: 70px; /* Botão de subir */
+    left: 20px;
+}
+
+#scrollDown {
+    bottom: 70px; /* Botão de descer */
+    right: 20px;
+}
+
+/* Efeito de hover nos botões */
+#scrollUp:hover, #scrollDown:hover {
+    background-color: #45a049;
+}
+
+/* Para garantir que a página se ajuste de forma adequada */
+html {
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+body {
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
 
