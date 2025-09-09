@@ -81,3 +81,68 @@
     <img src="7.jpeg" alt="Imagem 7" </img>
     <img src="8.jpeg" alt="Imagem 8" </img>
 
+
+
+
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Suave</title>
+  <style>
+    body {
+      height: 3000px; /* Altura grande para permitir rolagem */
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .botao {
+      position: fixed;
+      right: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      color: white;
+      border-radius: 5px;
+    }
+
+    #subir {
+      bottom: 70px;
+      background-color: #4CAF50;
+    }
+
+    #descer {
+      bottom: 20px;
+      background-color: #2196F3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Teste de Scroll</h1>
+  <p>Role a página usando os botões fixos.</p>
+
+  <!-- Botões -->
+  <button id="subir" class="botao" onclick="scrollParaCima()">Subir</button>
+  <button id="descer" class="botao" onclick="scrollParaBaixo()">Descer</button>
+
+  <!-- Scripts -->
+  <script>
+    function scrollParaCima() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    function scrollParaBaixo() {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+</body>
+</html>
